@@ -1,6 +1,7 @@
-import encoder, decoder
+import Encoder
+import Decoder
 
 message = input('Enter String: ')
-encoded = encoder.encode(message)
-decoded = decoder.decode(encoded)
-print( f"encoded: {encoded} \ndecoded: {decoded}" )
+encoded = Encoder.encode(message)
+decoded = Decoder.decode(encoded)
+print(f"encoded: {encoded} \ndecoded: {decoded}")
