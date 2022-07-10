@@ -1,7 +1,6 @@
-import Encoder
-import Decoder
+import MorseCoder
 
 message = input('Enter String: ')
-encoded = Encoder.encode(message)
-decoded = Decoder.decode(encoded)
+encoded = MorseCoder.encode(message)
+decoded = MorseCoder.decode(encoded)
 print(f"encoded: {encoded} \ndecoded: {decoded}")
