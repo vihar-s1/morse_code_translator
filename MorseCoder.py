@@ -2,6 +2,9 @@ from DataSet import MORSE_CODE_DICT
 
 
 def decode(encoded_string: str | None):
+    '''
+    Decodes the given encoded string. Only focuses on valid encoded portions.
+    '''
     encoded_string = encoded_string.strip() + " "
 
     if encoded_string is None or encoded_string == "":
@@ -26,3 +29,18 @@ def decode(encoded_string: str | None):
             message += letter
 
     return message
+
+
+def encode(message: str | None):
+    '''
+    Encodes given string in morse code. Only converts characters present in the DataSet.
+    '''
+    message = message.strip().upper()
+    if message is None or message == "":
+        return None
+
+    encoded_string = ""
+    for letter in message:
+        encode = MORSE_CODE_DICT.get(key=letter, default=letter) + " "
+        encoded_string += encode
+    return encoded_string
